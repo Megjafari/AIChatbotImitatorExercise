@@ -6,7 +6,7 @@
         {
             Random random = new Random();
 
-            string[] responses = 
+            string[] responses = // Sample responses to mimic an AI chatbot, Array of strings
             {
                 "Hello! How can I assist you today?",
                 "I'm here to help! What do you need?",
@@ -17,7 +17,8 @@
 
             Console.WriteLine("Welcome to the AI Chatbot Imitator!");
             Console.WriteLine("Type 'exit' to quit the program.");
-            while (true)
+
+            while (true)            // Infinite loop to keep the program running until the user decides to exit
             {
                 Console.Write("You: ");
                 string userInput = Console.ReadLine()!;
@@ -25,8 +26,8 @@
                 if (userInput.ToLower() == "exit")
                 break;
 
-                int responseIndex = random.Next(responses.Length);
-                string botResponse = responses[responseIndex];
+                int responseIndex = random.Next(responses.Length);      // Generate a random index to select a response
+                string botResponse = responses[responseIndex];          // Select a random response from the array
 
                 Console.WriteLine("AI: " + botResponse);
             }
